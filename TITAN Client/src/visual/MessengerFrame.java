@@ -1,4 +1,4 @@
-package frames;
+package visual;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -96,6 +96,7 @@ public class MessengerFrame extends JFrame {
 		setContentPane(contentPane);
 
 		splitPane = new JSplitPane();
+		splitPane.setDividerLocation(15);
 		contentPane.add(splitPane, BorderLayout.CENTER);
 
 		pChatHistory = new JPanel();
@@ -203,6 +204,7 @@ public class MessengerFrame extends JFrame {
 		}
 		list.setListData(names);
 		list.setSelectedIndex(selection);
+		splitPane.setDividerLocation(list.getPreferredSize().getWidth());
 	}
 
 	private void updateChatHistory(Message message) {

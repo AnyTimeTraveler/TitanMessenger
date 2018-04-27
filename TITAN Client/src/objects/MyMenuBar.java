@@ -15,9 +15,8 @@ import javax.swing.JRadioButtonMenuItem;
 
 import org.bouncycastle.openpgp.PGPException;
 
+import visual.MessengerFrame;
 import components.DataHandler;
-
-import frames.MessengerFrame;
 
 public class MyMenuBar extends JMenuBar {
 	private JMenu contactsMenu, statusMenu;

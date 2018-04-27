@@ -6,6 +6,9 @@ import io.NioUnit;
 import java.io.IOException;
 import java.net.URISyntaxException;
 
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
+
 import components.DBConnector;
 
 public class MainServer {
@@ -25,7 +28,6 @@ public class MainServer {
 			doGUI = true;
 			hostPort = 9000;
 		}
-
 		String configFilePath = null;
 		frameWaiter = new Object();
 		try {
@@ -37,6 +39,15 @@ public class MainServer {
 		}
 
 		if (doGUI) {
+			try {
+				UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+			} catch (	ClassNotFoundException |
+						InstantiationException |
+						IllegalAccessException |
+						UnsupportedLookAndFeelException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 			Thread frameThread = new Thread(new Runnable() {
 
 				public void run() {

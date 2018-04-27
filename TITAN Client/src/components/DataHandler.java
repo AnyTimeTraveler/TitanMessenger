@@ -29,6 +29,7 @@ import objects.User;
 import org.bouncycastle.openpgp.PGPException;
 import org.javatuples.Pair;
 
+import visual.MessengerFrame;
 import actions.Action;
 import actions.AddFriendAction;
 import actions.LoginAction;
@@ -37,7 +38,6 @@ import events.ActionEvent;
 import events.DataReceivedEvent;
 import events.Event;
 import events.LogEvent;
-import frames.MessengerFrame;
 
 public class DataHandler implements events.EventHandler {
 

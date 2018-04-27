@@ -1,4 +1,4 @@
-package frames;
+package visual;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -45,11 +45,11 @@ public class LoginFrame extends JFrame {
 	private Observer			loginObserver;
 
 	private JPanel				contentPane;
+	private JTextField			tfUsername;
 	private JPasswordField		pfPassword;
 	private JComboBox<String>	cbServer;
 	private JButton				btnLogin;
 	private JButton				btnCancel;
-	private JTextField			tfUsername;
 	public static Object		waiter;
 	private JLabel				lblError;
 	private JPanel				loginPanel;
@@ -65,6 +65,7 @@ public class LoginFrame extends JFrame {
 		super("TITAN Messenger Login");
 		waiter = new Object();
 		instance = this;
+		setResizable(false);
 		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		setSize();
 		contentPane = new JPanel();
